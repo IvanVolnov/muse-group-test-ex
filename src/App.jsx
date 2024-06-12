@@ -2,17 +2,20 @@ import './App.css';
 import LeadForm from './components/LeadForm';
 import Products from './components/Products';
 import Footer from './components/Footer';
+import logoSvg from '/logo.svg';
 
 function App() {
   return (
-    <>
-      <header>Logo</header>
+    <div id='layout'>
+      <header>
+        <img id='logo' src={logoSvg} />
+      </header>
       <main>
         <LeadForm />
         <Products />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

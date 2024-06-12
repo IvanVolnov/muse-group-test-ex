@@ -1,0 +1,9 @@
+#layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#logo {
+  margin: clamp(1rem, 3.5vw, 2rem) 0;
+}

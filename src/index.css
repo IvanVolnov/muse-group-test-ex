@@ -1,10 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mulish:wght@200..1000&display=swap');
+
 :root {
-  --color-background: #ffffff;
-  --color-text-primary: #252323;
-  --color-text-secondary: #4b4b4b;
-  --color-cta: #3366ff;
-  --color-input-border: #c0c0c0;
+  --input-border-color: #c0c0c0;
+  --text-input-color: #3b3b3b;
+  --text-primary-color: #252323;
+  --text-secondary-color: #4b4b4b;
+  --text-button-color: #ffffff;
+  --divider-color: #d8d8d8;
+  --bg-color: #ffffff;
+  --cta-color: #36f;
+  --cta-hover-color: #2b57d9;
+  --accent-color: #f8d57e;
+  --lead-form-color: #eef0f2;
+
+  --font-family: 'Inter', sans-serif;
+  --second-family: 'Mulish', sans-serif;
 }
+
+/* css reset */
 
 *,
 *::before,
@@ -15,45 +28,81 @@
   font: inherit;
 }
 
-body {
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  min-height: 100svh;
-  font-family: 'Arial', sans-serif;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-a:visited {
-  color: inherit;
-}
 ul {
   list-style: none;
 }
 
+/* body  */
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+}
+/* text */
+
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-weight: 600;
+  font-size: clamp(1.38rem, 4.5vw, 1.62rem);
+  line-height: 130%;
+  color: var(--text-primary-color);
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 1.12rem;
+  line-height: 130%;
+  color: var(--text-primary-color);
+}
+
+p {
+  font-weight: 400;
+  font-size: clamp(0.88rem, 2.8vw, 1rem);
+  line-height: 150%;
+  color: var(--text-secondary-color);
+}
+
+.text_small {
+  font-size: 0.88rem;
+}
+
+/* button */
+
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  background-color: #1a1a1a;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.7em 1.7em;
   cursor: pointer;
-  transition: border-color 0.25s;
+  background: var(--cta-color);
+  transition: all 0.4s;
+  color: var(--text-button-color);
 }
-button:hover {
-  border-color: #646cff;
-}
+
 button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+button:focus-visible,
+button:hover {
+  border-color: var(--cta-hover-color);
+  background: var(--cta-hover-color);
+}
+
+/* links */
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--cta-color);
+}
+
+/* inputs */
+
+input {
+  border: 1px solid var(--input-border-color);
+  border-radius: 0.5rem;
+  min-height: 2.81rem;
+  font-size: 0.88rem;
+  line-height: 150%;
+  color: var(--text-input-color);
 }
