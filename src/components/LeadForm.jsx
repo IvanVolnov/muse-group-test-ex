@@ -11,14 +11,22 @@ export default function LeadForm() {
           empower you with the skills and knowledge needed to succeed in the
           ever-evolving field of frontend development.
         </p>
-        <img id='photo' src={photoImg} />
+        <img className={styles.photo} src={photoImg} />
         <p className='text_small'>
           Are you ready to turn your passion for technology into a thriving
           career?
         </p>
         <form className={styles.email_form}>
-          <input type='email' name='email' placeholder='Email' required></input>
-          <button>Join</button>
+          <input
+            className={styles.form_input}
+            type='email'
+            name='email'
+            placeholder='Email'
+            required
+          ></input>
+          <button className={styles.form_button} type='submit'>
+            Join
+          </button>
         </form>
       </div>
     </section>

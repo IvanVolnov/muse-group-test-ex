@@ -72,7 +72,7 @@ p {
 button {
   border: none;
   border-radius: 0.5rem;
-  padding: 0.7em 1.7em;
+  padding: 0.86em 1.71em;
   cursor: pointer;
   background: var(--cta-color);
   transition: all 0.4s;
@@ -104,5 +104,6 @@ input {
   min-height: 2.81rem;
   font-size: 0.88rem;
   line-height: 150%;
+  padding: 0.94rem 1.25rem;
   color: var(--text-input-color);
 }

@@ -13,12 +13,41 @@
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  text-align: center;
+}
+
+.photo {
+  width: 100%;
+  max-width: 40rem;
 }
 
 .email_form {
   display: flex;
   flex-direction: row;
+  width: 100%;
   max-width: 27rem;
   gap: 0.63rem;
+}
+
+.form_input {
   flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.form_button {
+  padding-right: 2.45em;
+  flex-shrink: 0;
+}
+
+.form_button::after {
+  content: '';
+  background-image: url('/CaretRight.svg');
+  background-size: 1em 1em;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  position: relative;
+  left: 0.73em;
+  top: 0.15rem;
 }
