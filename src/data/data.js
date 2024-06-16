@@ -1,4 +1,4 @@
-const projects = [
+const products = [
   {
     name: 'Ultimate Guitar',
     description: `The best platform for music makers to play songs they love. Home to the world's largest music community.`,
@@ -22,4 +22,4 @@ const projects = [
   },
 ];
 
-export { projects };
+export { products };

@@ -10,7 +10,7 @@ function App() {
       <header>
         <img id='logo' src={logoSvg} />
       </header>
-      <main>
+      <main id='main_container'>
         <LeadForm />
         <Products />
       </main>
