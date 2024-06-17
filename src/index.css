@@ -26,6 +26,7 @@
   padding: 0;
   box-sizing: border-box;
   font: inherit;
+  /* background-color: rgba(0, 136, 255, 0.2); */
 }
 
 ul {
@@ -70,6 +71,7 @@ p {
 /* button */
 
 button {
+  font-size: 0.88rem;
   border: none;
   border-radius: 0.5rem;
   padding: 0.86em 1.71em;
@@ -104,6 +106,6 @@ input {
   min-height: 2.81rem;
   font-size: 0.88rem;
   line-height: 150%;
-  padding: 0.94rem 1.25rem;
+  padding: 0.86em 1.71em;
   color: var(--text-input-color);
 }

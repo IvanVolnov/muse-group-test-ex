@@ -1,7 +1,19 @@
 import photoImg from '/photo.png';
+import photoImgMobile from '/photo-mobile.png';
 import styles from './LeadForm.module.css';
 
 export default function LeadForm() {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const email = event.target.elements.email.value;
+    if (!emailRegex.test(email)) {
+      alert('Email is invalid');
+      return;
+    }
+    alert('Welcome to the team!');
+  };
+
   return (
     <section id={styles.bg_container}>
       <div className={styles.content_container}>
@@ -11,12 +23,22 @@ export default function LeadForm() {
           empower you with the skills and knowledge needed to succeed in the
           ever-evolving field of frontend development.
         </p>
-        <img className={styles.photo} src={photoImg} />
+
+        <picture>
+          <source media='(max-width: 386px)' srcSet={photoImgMobile} />
+          <source media='(min-width: 385px)' srcSet={photoImg} />
+          <img
+            className={styles.photo}
+            src={photoImg}
+            alt='a photo of person playing guitar on a bed with posters and plants'
+          />
+        </picture>
+
         <p className='text_small'>
           Are you ready to turn your passion for technology into a thriving
           career?
         </p>
-        <form className={styles.email_form}>
+        <form className={styles.email_form} onSubmit={handleSubmit}>
           <input
             className={styles.form_input}
             type='email'

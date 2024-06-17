@@ -5,7 +5,7 @@ import styles from './Products.module.css';
 export default function Products() {
   return (
     <section className={styles.content_container}>
-      <h1>Our Products</h1>
+      <h1>Our products</h1>
       <div className={styles.products_wrapper}>
         {products.map((x) => (
           <ProjectCard
